@@ -117,7 +117,7 @@ class LearningClass {
 
 	setSamples(length) {
 		this.exampleCounter = length;
-		let text = this.exampleCounter;	
+		let text = this.exampleCounter;
 
 		let recommendedNumSamples = (GLOBALS.inputType === 'cam') ? 30 : 10;
 
@@ -126,8 +126,8 @@ class LearningClass {
 		if (this.exampleCounter >= recommendedNumSamples && GLOBALS.classesTrained[this.id] === false) {
 			GLOBALS.classesTrained[this.id] = true;
 		}
-		
-	}	
+
+	}
 
 	setConfidence(percentage) {
 		// this.percentage = percentage;
@@ -152,7 +152,7 @@ class LearningClass {
 
 	buttonDown() {
 		let that = this;
-		this.button.setText('Training');
+		this.button.setText('Entrenando');
 		this.section.startRecording(this.index);
 
 		this.buttonUpEvent = this.buttonUp.bind(this);
